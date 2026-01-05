@@ -1,0 +1,200 @@
+.page {
+  min-height: 100vh;
+  padding-top: 73px;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-9) var(--space-6);
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-9);
+}
+
+.title {
+  font: var(--font-display);
+  background: linear-gradient(135deg, var(--color-neutral-12), var(--electro), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.subtitle {
+  font: var(--font-subheading);
+  color: var(--color-neutral-11);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding: var(--space-6) 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--electro), var(--gold), var(--hydro));
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: var(--space-8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.timelineItem:nth-child(even) .card {
+  grid-column: 2;
+}
+
+.timelineItem:nth-child(even) .period {
+  grid-column: 1;
+  text-align: right;
+}
+
+.timelineItem:nth-child(odd) .card {
+  grid-column: 1;
+}
+
+.timelineItem:nth-child(odd) .period {
+  grid-column: 2;
+  text-align: left;
+}
+
+.node {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background: var(--element-color);
+  border: 4px solid var(--bg-dark);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--element-color);
+  z-index: 2;
+  transition: all 0.3s var(--ease-out);
+}
+
+.timelineItem:hover .node {
+  transform: translate(-50%, -50%) scale(1.5);
+  box-shadow: 0 0 30px var(--element-color);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 2px solid var(--color-neutral-6);
+  border-radius: var(--radius-4);
+  padding: var(--space-6);
+  transition: all 0.3s var(--ease-out);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--element-color);
+  border-radius: var(--radius-4) var(--radius-4) 0 0;
+}
+
+.timelineItem:hover .card {
+  border-color: var(--element-color);
+  transform: translateY(-4px);
+  box-shadow:
+    var(--shadow-4),
+    0 0 25px var(--element-glow);
+}
+
+.cardTitle {
+  font: var(--font-heading);
+  font-size: var(--font-size-4);
+  margin: 0 0 var(--space-2) 0;
+  color: var(--color-neutral-12);
+}
+
+.organization {
+  color: var(--element-color);
+  font-weight: 600;
+  font-size: var(--font-size-2);
+  margin-bottom: var(--space-4);
+}
+
+.description {
+  color: var(--color-neutral-11);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement {
+  color: var(--color-neutral-11);
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-2);
+  position: relative;
+}
+
+.achievement::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--element-color);
+  font-size: var(--font-size-2);
+}
+
+.period {
+  font: var(--font-heading);
+  font-size: var(--font-size-3);
+  color: var(--gold);
+  text-shadow: var(--glow-gold);
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timelineItem {
+    grid-template-columns: 1fr;
+    padding-left: var(--space-8);
+  }
+
+  .timelineItem:nth-child(even) .card,
+  .timelineItem:nth-child(odd) .card {
+    grid-column: 1;
+  }
+
+  .timelineItem:nth-child(even) .period,
+  .timelineItem:nth-child(odd) .period {
+    grid-column: 1;
+    text-align: left;
+    margin-bottom: var(--space-3);
+  }
+
+  .node {
+    left: 20px;
+  }
+}

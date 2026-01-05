@@ -1,0 +1,92 @@
+.toggle {
+  position: fixed;
+  top: var(--space-6);
+  right: var(--space-6);
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--bg-card);
+  border: 2px solid var(--color-neutral-6);
+  border-radius: var(--radius-round);
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+  box-shadow: var(--shadow-3);
+}
+
+.toggle:hover {
+  border-color: var(--gold);
+  box-shadow: var(--glow-gold);
+  transform: translateY(-2px);
+}
+
+.iconWrapper {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.sunIcon,
+.moonIcon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transition: all 0.4s var(--ease-bounce-out);
+}
+
+.sunIcon {
+  color: var(--gold);
+  opacity: 0;
+  transform: rotate(-90deg) scale(0);
+}
+
+.moonIcon {
+  color: var(--purple-9);
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+[data-theme="light"] .sunIcon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+[data-theme="light"] .moonIcon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0);
+}
+
+.track {
+  width: 48px;
+  height: 24px;
+  background: var(--color-neutral-4);
+  border-radius: var(--radius-round);
+  position: relative;
+  transition: background 0.3s var(--ease-out);
+}
+
+.thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--purple-9), var(--gold));
+  border-radius: 50%;
+  transition: transform 0.3s var(--ease-bounce-out);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .thumb {
+  transform: translateX(24px);
+  background: linear-gradient(135deg, var(--gold), var(--amber-9));
+}
+
+@media (max-width: 640px) {
+  .toggle {
+    top: var(--space-4);
+    right: var(--space-4);
+    padding: var(--space-2) var(--space-3);
+  }
+}

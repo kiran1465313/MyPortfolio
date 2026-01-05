@@ -1,0 +1,123 @@
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+.gradient1,
+.gradient2,
+.gradient3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  animation: float 20s ease-in-out infinite;
+}
+
+.gradient1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--purple-9), transparent);
+  top: -200px;
+  left: -200px;
+  animation-delay: 0s;
+}
+
+.gradient2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--gold), transparent);
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 7s;
+  animation-duration: 25s;
+}
+
+.gradient3 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, var(--cyan-9), transparent);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 14s;
+  animation-duration: 30s;
+}
+
+.mesh {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      var(--color-neutral-3) 2px,
+      var(--color-neutral-3) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      var(--color-neutral-3) 2px,
+      var(--color-neutral-3) 3px
+    );
+  background-size: 50px 50px;
+  opacity: 0.03;
+  animation: meshMove 60s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(100px, -100px) scale(1.1);
+  }
+  50% {
+    transform: translate(-50px, 100px) scale(0.9);
+  }
+  75% {
+    transform: translate(-100px, -50px) scale(1.05);
+  }
+}
+
+@keyframes meshMove {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 50px 50px, 50px 50px;
+  }
+}
+
+[data-theme="light"] .background {
+  background: var(--bg-dark);
+}
+
+[data-theme="light"] .gradient1,
+[data-theme="light"] .gradient2,
+[data-theme="light"] .gradient3 {
+  opacity: 0.15;
+}
+
+[data-theme="light"] .mesh {
+  opacity: 0.05;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      var(--color-neutral-5) 2px,
+      var(--color-neutral-5) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      var(--color-neutral-5) 2px,
+      var(--color-neutral-5) 3px
+    );
+}

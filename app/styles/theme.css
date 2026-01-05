@@ -1,0 +1,270 @@
+/* Typography */
+html {
+  --font-display: 700 var(--font-size-fluid-3) "Orbitron", var(--font-geometric-humanist);
+  --font-heading: 600 var(--font-size-fluid-2) "Space Grotesk", var(--font-geometric-humanist);
+  --font-subheading: 500 var(--font-size-fluid-1) "Inter", var(--font-system-ui);
+  --font-body: var(--font-size-fluid-0) "Inter", var(--font-system-ui);
+  --font-caption: var(--font-size-fluid-0) "Inter", var(--font-system-ui);
+  --font-code: var(--font-size-fluid-0) "Fira Code", var(--font-monospace-code);
+}
+
+html[data-theme="dark"] {
+  /* Neutral colors - Deep dark backgrounds */
+  --color-neutral-1: var(--slate-1);
+  --color-neutral-2: var(--slate-2);
+  --color-neutral-3: var(--slate-3);
+  --color-neutral-4: var(--slate-4);
+  --color-neutral-5: var(--slate-5);
+  --color-neutral-6: var(--slate-6);
+  --color-neutral-7: var(--slate-7);
+  --color-neutral-8: var(--slate-8);
+  --color-neutral-9: var(--slate-9);
+  --color-neutral-10: var(--slate-10);
+  --color-neutral-11: var(--slate-11);
+  --color-neutral-12: var(--slate-12);
+  --color-neutral-contrast: var(--slate-contrast);
+
+  /* Accent colors - Electro Purple */
+  --color-accent-1: var(--purple-1);
+  --color-accent-2: var(--purple-2);
+  --color-accent-3: var(--purple-3);
+  --color-accent-4: var(--purple-4);
+  --color-accent-5: var(--purple-5);
+  --color-accent-6: var(--purple-6);
+  --color-accent-7: var(--purple-7);
+  --color-accent-8: var(--purple-8);
+  --color-accent-9: var(--purple-9);
+  --color-accent-10: var(--purple-10);
+  --color-accent-11: var(--purple-11);
+  --color-accent-12: var(--purple-12);
+  --color-accent-contrast: var(--purple-contrast);
+
+  /* Error colors */
+  --color-error-1: var(--red-1);
+  --color-error-2: var(--red-2);
+  --color-error-3: var(--red-3);
+  --color-error-4: var(--red-4);
+  --color-error-5: var(--red-5);
+  --color-error-6: var(--red-6);
+  --color-error-7: var(--red-7);
+  --color-error-8: var(--red-8);
+  --color-error-9: var(--red-9);
+  --color-error-10: var(--red-10);
+  --color-error-11: var(--red-11);
+  --color-error-12: var(--red-12);
+  --color-error-contrast: var(--red-contrast);
+
+  /* Success colors */
+  --color-success-1: var(--green-1);
+  --color-success-2: var(--green-2);
+  --color-success-3: var(--green-3);
+  --color-success-4: var(--green-4);
+  --color-success-5: var(--green-5);
+  --color-success-6: var(--green-6);
+  --color-success-7: var(--green-7);
+  --color-success-8: var(--green-8);
+  --color-success-9: var(--green-9);
+  --color-success-10: var(--green-10);
+  --color-success-11: var(--green-11);
+  --color-success-12: var(--green-12);
+  --color-success-contrast: var(--green-contrast);
+
+  /* Elemental colors */
+  --pyro: var(--orange-9);
+  --hydro: var(--blue-9);
+  --electro: var(--purple-9);
+  --cryo: var(--cyan-9);
+  --anemo: var(--green-9);
+  --geo: var(--amber-9);
+  --dendro: var(--grass-9);
+
+  /* Premium gold accent */
+  --gold: var(--gold-9);
+  --gold-light: var(--gold-11);
+  --gold-dark: var(--gold-7);
+
+  /* Background colors */
+  --bg-dark: #0a0e27;
+  --bg-card: #1a1f2e;
+  --bg-overlay: rgba(26, 31, 46, 0.95);
+
+  /* Glows */
+  --glow-gold: 0 0 20px rgba(255, 215, 0, 0.4);
+  --glow-electro: 0 0 30px rgba(142, 78, 198, 0.3);
+  --glow-pyro: 0 0 25px rgba(247, 107, 21, 0.3);
+  --glow-hydro: 0 0 25px rgba(1, 144, 255, 0.3);
+}
+
+html[data-theme="light"] {
+  /* Neutral colors - Light backgrounds */
+  --color-neutral-1: #fafafa;
+  --color-neutral-2: #f4f4f5;
+  --color-neutral-3: #e4e4e7;
+  --color-neutral-4: #d4d4d8;
+  --color-neutral-5: #a1a1aa;
+  --color-neutral-6: #71717a;
+  --color-neutral-7: #52525b;
+  --color-neutral-8: #3f3f46;
+  --color-neutral-9: #27272a;
+  --color-neutral-10: #18181b;
+  --color-neutral-11: #09090b;
+  --color-neutral-12: #000000;
+  --color-neutral-contrast: #ffffff;
+
+  /* Accent colors - Electro Purple */
+  --color-accent-1: #faf8ff;
+  --color-accent-2: #f3edff;
+  --color-accent-3: #e9dbff;
+  --color-accent-4: #dcc5ff;
+  --color-accent-5: #cea9ff;
+  --color-accent-6: #be87ff;
+  --color-accent-7: #ab5eff;
+  --color-accent-8: #9333ea;
+  --color-accent-9: var(--purple-9);
+  --color-accent-10: #7c3aed;
+  --color-accent-11: #6b21a8;
+  --color-accent-12: #581c87;
+  --color-accent-contrast: var(--purple-contrast);
+
+  /* Error colors */
+  --color-error-1: #fff5f5;
+  --color-error-2: #ffe3e3;
+  --color-error-3: #ffc9c9;
+  --color-error-4: #ffa8a8;
+  --color-error-5: #ff8787;
+  --color-error-6: #ff6b6b;
+  --color-error-7: #fa5252;
+  --color-error-8: #f03e3e;
+  --color-error-9: var(--red-9);
+  --color-error-10: #e03131;
+  --color-error-11: #c92a2a;
+  --color-error-12: #b02525;
+  --color-error-contrast: var(--red-contrast);
+
+  /* Success colors */
+  --color-success-1: #f3faf7;
+  --color-success-2: #e6f4ed;
+  --color-success-3: #c3e9d7;
+  --color-success-4: #96dbb9;
+  --color-success-5: #63c997;
+  --color-success-6: #3bb477;
+  --color-success-7: #2f9e6b;
+  --color-success-8: #26875d;
+  --color-success-9: var(--green-9);
+  --color-success-10: #1e6f50;
+  --color-success-11: #195e43;
+  --color-success-12: #154c36;
+  --color-success-contrast: var(--green-contrast);
+
+  /* Elemental colors */
+  --pyro: var(--orange-9);
+  --hydro: var(--blue-9);
+  --electro: var(--purple-9);
+  --cryo: var(--cyan-9);
+  --anemo: var(--green-9);
+  --geo: var(--amber-9);
+  --dendro: var(--grass-9);
+
+  /* Premium gold accent */
+  --gold: #d97706;
+  --gold-light: #f59e0b;
+  --gold-dark: #b45309;
+
+  /* Background colors */
+  --bg-dark: #ffffff;
+  --bg-card: #f9fafb;
+  --bg-overlay: rgba(249, 250, 251, 0.95);
+
+  /* Glows */
+  --glow-gold: 0 0 20px rgba(217, 119, 6, 0.2);
+  --glow-electro: 0 0 30px rgba(147, 51, 234, 0.2);
+  --glow-pyro: 0 0 25px rgba(247, 107, 21, 0.2);
+  --glow-hydro: 0 0 25px rgba(1, 144, 255, 0.2);
+}
+
+/* Default to dark theme */
+html {
+  --color-neutral-1: var(--slate-1);
+  --color-neutral-2: var(--slate-2);
+  --color-neutral-3: var(--slate-3);
+  --color-neutral-4: var(--slate-4);
+  --color-neutral-5: var(--slate-5);
+  --color-neutral-6: var(--slate-6);
+  --color-neutral-7: var(--slate-7);
+  --color-neutral-8: var(--slate-8);
+  --color-neutral-9: var(--slate-9);
+  --color-neutral-10: var(--slate-10);
+  --color-neutral-11: var(--slate-11);
+  --color-neutral-12: var(--slate-12);
+  --color-neutral-contrast: var(--slate-contrast);
+
+  /* Accent colors - Electro Purple */
+  --color-accent-1: var(--purple-1);
+  --color-accent-2: var(--purple-2);
+  --color-accent-3: var(--purple-3);
+  --color-accent-4: var(--purple-4);
+  --color-accent-5: var(--purple-5);
+  --color-accent-6: var(--purple-6);
+  --color-accent-7: var(--purple-7);
+  --color-accent-8: var(--purple-8);
+  --color-accent-9: var(--purple-9);
+  --color-accent-10: var(--purple-10);
+  --color-accent-11: var(--purple-11);
+  --color-accent-12: var(--purple-12);
+  --color-accent-contrast: var(--purple-contrast);
+
+  /* Error colors */
+  --color-error-1: var(--red-1);
+  --color-error-2: var(--red-2);
+  --color-error-3: var(--red-3);
+  --color-error-4: var(--red-4);
+  --color-error-5: var(--red-5);
+  --color-error-6: var(--red-6);
+  --color-error-7: var(--red-7);
+  --color-error-8: var(--red-8);
+  --color-error-9: var(--red-9);
+  --color-error-10: var(--red-10);
+  --color-error-11: var(--red-11);
+  --color-error-12: var(--red-12);
+  --color-error-contrast: var(--red-contrast);
+
+  /* Success colors */
+  --color-success-1: var(--green-1);
+  --color-success-2: var(--green-2);
+  --color-success-3: var(--green-3);
+  --color-success-4: var(--green-4);
+  --color-success-5: var(--green-5);
+  --color-success-6: var(--green-6);
+  --color-success-7: var(--green-7);
+  --color-success-8: var(--green-8);
+  --color-success-9: var(--green-9);
+  --color-success-10: var(--green-10);
+  --color-success-11: var(--green-11);
+  --color-success-12: var(--green-12);
+  --color-success-contrast: var(--green-contrast);
+
+  /* Elemental colors */
+  --pyro: var(--orange-9);
+  --hydro: var(--blue-9);
+  --electro: var(--purple-9);
+  --cryo: var(--cyan-9);
+  --anemo: var(--green-9);
+  --geo: var(--amber-9);
+  --dendro: var(--grass-9);
+
+  /* Premium gold accent */
+  --gold: var(--gold-9);
+  --gold-light: var(--gold-11);
+  --gold-dark: var(--gold-7);
+
+  /* Background colors */
+  --bg-dark: #0a0e27;
+  --bg-card: #1a1f2e;
+  --bg-overlay: rgba(26, 31, 46, 0.95);
+
+  /* Glows */
+  --glow-gold: 0 0 20px rgba(255, 215, 0, 0.4);
+  --glow-electro: 0 0 30px rgba(142, 78, 198, 0.3);
+  --glow-pyro: 0 0 25px rgba(247, 107, 21, 0.3);
+  --glow-hydro: 0 0 25px rgba(1, 144, 255, 0.3);
+}
